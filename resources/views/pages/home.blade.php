@@ -16,7 +16,7 @@
           </div>
   
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="info-box blue-bg">
                 <i class="fa fa-cloud-download"></i>
                 <div class="count">6.674</div>
@@ -24,7 +24,7 @@
               </div>
               <!--/.info-box-->
             </div>
-            <!--/.col-->
+            <!--/.col--> --}}
   
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="info-box brown-bg">
@@ -46,14 +46,14 @@
             </div>
             <!--/.col-->
   
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            {{-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="info-box green-bg">
                 <i class="fa fa-cubes"></i>
                 <div class="count">1.426</div>
                 <div class="title">Stock</div>
               </div>
               <!--/.info-box-->
-            </div>
+            </div> --}}
             <!--/.col-->
   
           </div>

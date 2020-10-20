@@ -62,7 +62,6 @@
                       </a>
             <ul class="sub">
               <li><a class="" href="/dashboard/questions/add">Add Questions</a></li>
-              <li><a class="" href="/dashboard/users/add">Add Users</a></li>
               <li><a class="" href="/dashboard/exam/generate">Generate Exam Paper</a></li>
             </ul>
           </li>
