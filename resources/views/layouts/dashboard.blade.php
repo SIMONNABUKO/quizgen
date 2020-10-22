@@ -49,7 +49,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
-            <a class="" href="index.html">
+            <a class="" href="/dashboard/home">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -62,7 +62,7 @@
                       </a>
             <ul class="sub">
               <li><a class="" href="/dashboard/questions/add">Add Questions</a></li>
-              <li><a class="" href="/dashboard/exam/generate">Generate Exam Paper</a></li>
+              <li><a class="" href="/dashboard/exams/generate">Generate Exam Paper</a></li>
             </ul>
           </li>
          <li>

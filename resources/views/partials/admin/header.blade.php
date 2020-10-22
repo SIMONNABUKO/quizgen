@@ -225,7 +225,7 @@
                           <span class="profile-ava">
                               <img alt="" src="img/avatar1_small.jpg">
                           </span>
-                          <span class="username">Jenifer Smith</span>
+                        <span class="username">{{auth()->user()->name}}</span>
                           <b class="caret"></b>
                       </a>
           <ul class="dropdown-menu extended logout">

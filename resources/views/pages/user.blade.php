@@ -27,25 +27,24 @@
                   <div class="col-lg-2 col-sm-2">
                   <h4>{{$user->name}}</h4>
                     <div class="follow-ava">
-                      <img src="img/profile-widget-avatar.jpg" alt="">
+                    <img src="{{asset('admin/img/profile-widget-avatar.jpg')}}" alt="">
                     </div>
                     <h6>{{$user->rank}}</h6>
                   </div>
                   <div class="col-lg-4 col-sm-4 follow-info">
-                    <p>Hello I’m Jenifer Smith, a leading expert in interactive and creative design.</p>
-                    <p>@jenifersmith</p>
-                    <p><i class="fa fa-twitter">jenifertweet</i></p>
+                    <p>You have no bio yet</p>
+                  <p>{{$user->email}}</p>
+                  <p><i class="fa fa-twitter">{{$user->username}}</i></p>
                     <h6>
-                                      <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                      <span><i class="icon_calendar"></i>25.10.13</span>
-                                      <span><i class="icon_pin_alt"></i>NY</span>
+                    <span><i class="icon_clock_alt"></i>You joined {{$user->created_at->diffforhumans()}}</span>
+                                     
                                   </h6>
                   </div>
                   <div class="col-lg-2 col-sm-6 follow-info weather-category">
                     <ul>
                       <li class="active">
   
-                        <i class="fa fa-comments fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                        <i class="fa fa-comments fa-2x"> </i><br>You have no messages yet
                       </li>
   
                     </ul>
@@ -54,7 +53,7 @@
                     <ul>
                       <li class="active">
   
-                        <i class="fa fa-bell fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                        <i class="fa fa-bell fa-2x"> </i><br> You have no notifications yet
                       </li>
   
                     </ul>
@@ -63,7 +62,7 @@
                     <ul>
                       <li class="active">
   
-                        <i class="fa fa-tachometer fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                        <i class="fa fa-tachometer fa-2x"> </i><br> No measurement on your activities yet
                       </li>
   
                     </ul>
@@ -130,34 +129,22 @@
                     <div id="profile" class="tab-pane">
                       <section class="panel">
                         <div class="bio-graph-heading">
-                          Hello I’m Jenifer Smith, a leading expert in interactive and creative design specializing in the mobile medium. My graduation from Massey University with a Bachelor of Design majoring in visual communication.
+                         User's Bio Not added
                         </div>
                         <div class="panel-body bio-graph-info">
-                          <h1>Bio Graph</h1>
+                          <h1>User Information</h1>
                           <div class="row">
                             <div class="bio-row">
-                              <p><span>First Name </span>: Jenifer </p>
+                              <p><span>Name </span>: {{$user->name}} </p>
                             </div>
                             <div class="bio-row">
-                              <p><span>Last Name </span>: Smith</p>
+                              <p><span>Rank </span>: {{$user->rank}}</p>
                             </div>
                             <div class="bio-row">
-                              <p><span>Birthday</span>: 27 August 1987</p>
+                            <p><span>Added:</span>: {{$user->created_at->diffforhumans()}}</p>
                             </div>
                             <div class="bio-row">
-                              <p><span>Country </span>: United</p>
-                            </div>
-                            <div class="bio-row">
-                              <p><span>Occupation </span>: UI Designer</p>
-                            </div>
-                            <div class="bio-row">
-                              <p><span>Email </span>:jenifer@mailname.com</p>
-                            </div>
-                            <div class="bio-row">
-                              <p><span>Mobile </span>: (+6283) 456 789</p>
-                            </div>
-                            <div class="bio-row">
-                              <p><span>Phone </span>: (+021) 956 789123</p>
+                            <p><span>mail: </span>: {{$user->email}}</p>
                             </div>
                           </div>
                         </div>

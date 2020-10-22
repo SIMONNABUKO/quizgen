@@ -16,6 +16,14 @@
             </div>
           </div>
 
+          <div class="flash-message">
+            @if(\Session::has('message'))
+
+            <p class="alert
+            {{ Session::get('alert-class', 'alert-success') }}">{{Session::get('message') }}</p>
+            @endif
+          </div> <!-- end .flash-message -->
+
           <div class="row">
 
             <div class="col-lg-9 col-md-12">
@@ -50,8 +58,11 @@
                                 <td>{{$quiz->level}}</td>
                                 <td>{{$quiz->difficulty}}</td>
                                 <td><a href="#"><i class="fa fa-eye text-success"></i></a></td>
-                                <td><a href="#"><i class="fa fa-edit text-info"></i></a></td>
-                                <td><a href="#" class="text-danger"><i class="fa fa-trash"></i>Delete</a></td>
+                            <td><a href="/dashboard/questions/update/{{$quiz->id}}"><i class="fa fa-edit text-info"></i></a></td>
+                                <td><form action="{{ route('question.delete', ['id' => $quiz->id]) }}" method="POST" >
+                                  @csrf
+                                  <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                </form></td>
                                
                               </tr>
                             @endforeach

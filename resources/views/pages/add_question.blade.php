@@ -67,7 +67,12 @@
           <div class="form-group">
             <label class="col-lg-2 control-label">Subject</label>
             <div class="col-lg-6">
-              <input type="text" class="form-control" name="subject" id="l-name" placeholder="Enter the subject">
+              <select name="subject" id="" class="form-control">
+                <option value="BACHELOR OF COMMERCE">BACHELOR OF COMMERCE</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="zoology">zoology</option>
+                <option value="Biochemistry">Biochemistry</option>
+            </select>
             </div>
           </div>
           <div class="form-group">

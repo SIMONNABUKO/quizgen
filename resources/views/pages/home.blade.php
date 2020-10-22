@@ -14,17 +14,25 @@
               </ol>
             </div>
           </div>
+
+          <div class="flash-message">
+            @if(\Session::has('message'))
+
+            <p class="alert
+            {{ Session::get('alert-class', 'alert-success') }}">{{Session::get('message') }}</p>
+            @endif
+          </div> <!-- end .flash-message -->
   
           <div class="row">
-            {{-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="info-box blue-bg">
                 <i class="fa fa-cloud-download"></i>
-                <div class="count">6.674</div>
-                <div class="title">Download</div>
+                <div class="count">0</div>
+                <div class="title">Downloads</div>
               </div>
               <!--/.info-box-->
             </div>
-            <!--/.col--> --}}
+            <!--/.col-->
   
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="info-box brown-bg">
@@ -78,7 +86,7 @@
                         <th>Email</th>
                         <th>Rank</th>
                         <th>View</th>
-                        <th>Edit</th>
+          
                         <th>Delete</th>
                         
                       </tr>
@@ -90,9 +98,12 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->rank}}</td>
-                                <td><a href="#"><i class="fa fa-eye text-success"></i></a></td>
-                                <td><a href="#"><i class="fa fa-edit text-info"></i></a></td>
-                                <td><a href="#" class="text-danger"><i class="fa fa-trash"></i>Delete</a></td>
+                                <td><a href="/dashboard/users/{{$user->id}}"><i class="fa fa-eye text-success"></i></a></td>
+                                
+                                <td><form action="{{ route('user.delete', ['id' => $user->id]) }}" method="POST" >
+                                  @csrf
+                                  <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                                </form></td>
                                
                               </tr>
                             @endforeach
